@@ -8,7 +8,12 @@ export default function Navbar() {
         <ul>
           <li className="button-nav">
             <a href="#" className="green-text">
-              Button
+              Mis negocios
+            </a>
+          </li>
+          <li className="button-nav">
+            <a href="#" className="green-text">
+              Mis comentarios
             </a>
           </li>
           <li className="button-nav">

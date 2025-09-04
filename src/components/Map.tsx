@@ -8,15 +8,16 @@ export default function Map() {
 
   useEffect(() => {
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
+    if (!mapContainerRef.current) return;
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
-      center: [-74.0242, 40.6941],
+      center: [-99.13225, 19.43248],
       zoom: 10.12,
     });
 
     return () => {
-      mapRef.current.remove();
+      mapRef.current?.remove();
     };
   }, []);
 
@@ -25,7 +26,8 @@ export default function Map() {
       <div
         id="map-container"
         ref={mapContainerRef}
-        style={{ width: "100%", height: "800px" }}
+        style={{ width: "100%", height: "600px" }}
+        className="map"
       ></div>
     </>
   );

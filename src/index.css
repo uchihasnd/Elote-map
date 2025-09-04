@@ -3,6 +3,9 @@
   --light-gray: #f5f7f8;
   --grey: #d8d9da;
   --black: #0f0e0e;
+  --font-size-big: 32px;
+  --font-size-medium: 22px;
+  --font-size-small: 16px;
 }
 
 *,
@@ -27,8 +30,7 @@
 }
 
 .map {
-  height: 400px;
-  width: 400px;
+  margin-top: 16px;
 }
 
 .navbar {
@@ -59,17 +61,6 @@
   background-color: var(--light-gray);
 }
 
-.close-btn {
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-end !important;
-  margin-right: 8px !important;
-}
-
-.close-btn:hover {
-  background-color: transparent !important;
-}
-
 ul {
   display: flex;
 }
@@ -82,7 +73,25 @@ ul {
   margin-top: 16px;
 }
 
+.comments-section {
+  margin-top: 50px;
+}
+
 .comment {
   display: flex;
   flex-direction: column;
+}
+
+.medium-text {
+  display: flex;
+  font-size: var(--font-size-medium);
+  justify-content: center;
+}
+
+.small-text {
+  font-size: var(--font-size-small);
+}
+
+.line-height {
+  line-height: 1.2;
 }
