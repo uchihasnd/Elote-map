@@ -1,3 +1,5 @@
+import ModalLogin from "./ModalLogin";
+
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -17,9 +19,10 @@ export default function Navbar() {
             </a>
           </li>
           <li className="button-nav">
-            <a href="#" className="green-text">
+            {/* <a className="green-text">
               Iniciar sesión
-            </a>
+            </a> */}
+            <ModalLogin />
           </li>
         </ul>
       </div>
