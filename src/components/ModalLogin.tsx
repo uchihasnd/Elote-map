@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Login from "./Login";
+import ModalNewAccount from "./ModalNewAccount";
 
 export default function ModalLogin() {
   const [open, setOpen] = React.useState(false);
@@ -30,7 +31,7 @@ export default function ModalLogin() {
             <div>
               <Login />
               <span>
-                ¿Aún no tienes cuenta? <a href="">Crea una aquí</a>.
+                ¿Aún no tienes cuenta? <ModalNewAccount />.
               </span>
             </div>
           </div>

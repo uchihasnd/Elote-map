@@ -2,12 +2,12 @@ import ModalLogin from "./ModalLogin";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className="navbar flex-column">
       <div className="nav-element">
         <img src="/Icono/Mazorca.png" alt="Elote Map logo" className="icon" />
       </div>
       <div className="nav-element">
-        <ul>
+        <ul className="flex-column flex">
           <li className="button-nav">
             <a href="#" className="green-text">
               Mis negocios
@@ -19,9 +19,6 @@ export default function Navbar() {
             </a>
           </li>
           <li className="button-nav">
-            {/* <a className="green-text">
-              Iniciar sesión
-            </a> */}
             <ModalLogin />
           </li>
         </ul>
