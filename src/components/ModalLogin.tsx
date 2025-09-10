@@ -25,12 +25,12 @@ export default function ModalLogin() {
       >
         <Box sx={{ width: 800 }}>
           <div className="modal">
-            <h2 id="parent-modal-title" className="center green-text">
+            <h2 id="parent-modal-title" className="center green-text font">
               Iniciar sesión
             </h2>
             <div>
               <Login />
-              <span>
+              <span className="font">
                 ¿Aún no tienes cuenta? <ModalNewAccount />.
               </span>
             </div>

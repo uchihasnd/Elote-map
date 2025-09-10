@@ -1,15 +1,27 @@
 import "./App.css";
-import TemporaryDrawer from "./components/Drawer";
+import PersistentDrawerLeft from "./components/Drawer";
 import Map from "./components/Map";
 import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import Comments from "./components/Comments";
 
 function App() {
   return (
     <>
       <div className="font page-container">
         <Navbar />
-        <TemporaryDrawer />
-        <Map />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <PersistentDrawerLeft />
+                <Map />
+              </>
+            }
+          />
+          <Route path="/comments" element={<Comments />} />
+        </Routes>
       </div>
     </>
   );

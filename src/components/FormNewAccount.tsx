@@ -32,7 +32,7 @@ export default function FormNewAccount() {
         />
       </RadioGroup>
       <Button type="submit" className="green-button" id="green-button">
-        Crear
+        Registrarse
       </Button>
     </Box>
   );

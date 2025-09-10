@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ModalLogin from "./ModalLogin";
 
 export default function Navbar() {
@@ -9,14 +10,19 @@ export default function Navbar() {
       <div className="nav-element">
         <ul className="flex-column flex">
           <li className="button-nav">
+            <a href="./" className="green-text">
+              Inicio
+            </a>
+          </li>
+          <li className="button-nav">
             <a href="#" className="green-text">
               Mis negocios
             </a>
           </li>
           <li className="button-nav">
-            <a href="#" className="green-text">
+            <Link to="/comments" className="green-text">
               Mis comentarios
-            </a>
+            </Link>
           </li>
           <li className="button-nav">
             <ModalLogin />

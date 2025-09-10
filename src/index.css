@@ -55,7 +55,7 @@
 
 .green-text {
   color: var(--green-text);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -75,7 +75,7 @@
   margin-top: 16px;
 }
 
-.comments-section {
+.margin-top-50 {
   margin-top: 50px;
 }
 
@@ -124,6 +124,10 @@ button.green-button {
   color: var(--green-text);
 }
 
+button.green-background {
+  background-color: var(--green-text);
+}
+
 .green-button:hover {
   background-color: var(--green-text);
   color: var(--white);
@@ -135,6 +139,15 @@ button.green-button {
 
 .blue-link:hover {
   text-decoration: underline var(--light-blue);
+}
+
+.width-600 {
+  max-width: 800px;
+  margin: auto;
+}
+
+.padding-60 {
+  padding: 60px;
 }
 
 @media (max-width: 500px) {

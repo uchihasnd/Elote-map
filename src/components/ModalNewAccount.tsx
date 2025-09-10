@@ -29,13 +29,6 @@ export default function ModalNewAccount() {
             <h2 id="child-modal-title" className="center green-text">
               Crear tu cuenta
             </h2>
-            {/* <h2 id="child-modal-title" className="center green-text">
-              Crear tu cuenta
-            </h2>
-            <p id="child-modal-description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
-            <Button onClick={handleClose}>Close Child Modal</Button> */}
             <FormNewAccount />
           </div>
         </Box>

@@ -48,7 +48,7 @@ const DrawerList = (
           officiis.
         </p>
       </div>
-      <div className="comments-section margin-top-16">
+      <div className="margin-top-50 margin-top-16">
         <div className="comment margin-top-16">
           <Client />
           <Typography>Calificación</Typography>
