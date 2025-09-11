@@ -4,6 +4,7 @@ import Map from "./components/Map";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Comments from "./components/Comments";
+import BusinessInfo from "./components/BusinessInfo";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               </>
             }
           />
+          <Route path="/business" element={<BusinessInfo />} />
           <Route path="/comments" element={<Comments />} />
         </Routes>
       </div>

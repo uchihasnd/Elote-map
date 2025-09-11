@@ -24,6 +24,7 @@
 
 .font {
   font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size-small);
 }
 
 .icon {
@@ -146,8 +147,29 @@ button.green-background {
   margin: auto;
 }
 
+.width-400 {
+  max-width: 400px;
+  margin: auto;
+}
+
 .padding-60 {
   padding: 60px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.padding-8 {
+  padding: 8px;
+}
+
+/*Center*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 }
 
 @media (max-width: 500px) {
@@ -156,7 +178,7 @@ button.green-background {
     flex-direction: column;
   }
 
-  .modal {
+  .width-100 {
     width: 100%;
   }
 }

@@ -15,9 +15,12 @@ export default function Navbar() {
             </a>
           </li>
           <li className="button-nav">
-            <a href="#" className="green-text">
+            <Link to="/business" className="green-text">
               Mis negocios
-            </a>
+            </Link>
+            {/* <a href="#" className="green-text">
+              Mis negocios
+            </a> */}
           </li>
           <li className="button-nav">
             <Link to="/comments" className="green-text">
