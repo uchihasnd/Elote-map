@@ -13,8 +13,17 @@ export default function Map() {
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
       center: [-99.13225, 19.43248],
-      zoom: 10.12,
+      zoom: 12,
     });
+
+    new mapboxgl.Marker({ color: "#FF0000" })
+      .setLngLat([-99.13225, 19.43248])
+      .setPopup(new mapboxgl.Popup().setHTML("<h1>Hola</h1>"))
+      .addTo(mapRef.current!);
+
+    new mapboxgl.Marker({ color: "#FF0000", draggable: true })
+      .setLngLat([-99.14447, 19.4349])
+      .addTo(mapRef.current!);
 
     return () => {
       mapRef.current?.remove();
