@@ -80,6 +80,10 @@
   margin-top: 50px;
 }
 
+.margin-all-16 {
+  margin: 16px;
+}
+
 .comment {
   display: flex;
   flex-direction: column;
@@ -164,7 +168,14 @@ button.green-background {
   padding: 8px;
 }
 
-/*Center*/
+.border {
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  margin-left: 16px;
+  padding: 16px;
+}
+
+/* Center */
 .flex-center {
   display: flex;
   justify-content: center;
