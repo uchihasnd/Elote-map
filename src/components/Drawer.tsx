@@ -84,7 +84,6 @@ export default function PersistentDrawerLeft() {
         color="inherit"
         aria-label="open drawer"
         onClick={handleDrawerOpen}
-        edge="start"
         sx={[
           {
             mr: 2,
