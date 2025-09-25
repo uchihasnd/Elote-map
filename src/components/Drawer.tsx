@@ -1,17 +1,16 @@
-import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Rating from "@mui/material/Rating";
 import Business from "./Business";
 import Client from "./Client";
 import { Typography } from "@mui/material";
+import { DrawerContext } from "../utils/Context";
+import { useContext } from "react";
 
 const drawerWidth = 350;
 
@@ -67,33 +66,17 @@ const DrawerList = (
 
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+  const drawerContext = useContext(DrawerContext);
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  if (!drawerContext) {
+    throw new Error("DrawerContext is not provided");
+  }
+
+  const { open, handleDrawerClose } = drawerContext;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <IconButton
-        color="inherit"
-        aria-label="open drawer"
-        onClick={handleDrawerOpen}
-        sx={[
-          {
-            mr: 2,
-          },
-          open && { display: "none" },
-        ]}
-      >
-        <MenuIcon />
-      </IconButton>
-
+    <Box>
       <Drawer
         slotProps={{
           paper: {

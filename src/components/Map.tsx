@@ -2,9 +2,20 @@ import { useRef, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import { DrawerContext } from "../utils/Context";
+import { useContext } from "react";
+
 export default function Map() {
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
+
+  const drawerContext = useContext(DrawerContext);
+
+  if (!drawerContext) {
+    throw new Error("DrawerContext is not provided");
+  }
+
+  const { handleDrawerOpen } = drawerContext;
 
   useEffect(() => {
     mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
@@ -30,7 +41,7 @@ export default function Map() {
         .addTo(mapRef.current!);
 
       marcador.getElement().addEventListener("click", () => {
-        alert("Clicked");
+        handleDrawerOpen();
       });
     });
 
